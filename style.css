@@ -18,19 +18,24 @@ header, footer {
 
 nav {
     background-color: #333333; /* Темно-серый фон навигации */
-    text-align: center;
-    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 nav a {
     color: #ffffff; /* Белый текст навигации */
     text-decoration: none;
-    margin: 0 20px;
+    margin: 0 15px;
     font-weight: bold;
-    padding: 10px 15px;
+    padding: 8px 12px;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav a:hover {
@@ -79,4 +84,17 @@ button {
 
 button:hover {
     background-color: #ffd633; /* Более яркий желтый при наведении */
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+
+    nav a {
+        margin: 5px;
+        padding: 10px;
+    }
 }
