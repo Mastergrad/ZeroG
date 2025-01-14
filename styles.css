@@ -1,0 +1,97 @@
+
+/* Общие стили */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9fafb;
+  color: #222;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Контейнер */
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Заголовок */
+h1 {
+  color: #333;
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #666;
+  font-size: 1.2em;
+  margin: 5px 0 20px;
+}
+
+/* Цена */
+.price {
+  font-size: 2em;
+  font-weight: bold;
+  color: #7b3fe4;
+  margin: 10px 0;
+}
+
+/* Ссылка */
+a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+  color: #4d4dff;
+}
+
+a:hover {
+  color: #3a3af0;
+}
+
+/* Кнопка */
+button {
+  background: linear-gradient(90deg, #ff9d2f, #ff6126);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  margin: 20px 0;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #ff7e00, #e05025);
+}
+
+/* Маленький текст */
+.small-text {
+  color: #888;
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+/* Информация */
+.info {
+  margin: 20px 0;
+  font-size: 1em;
+}
+
+.info strong {
+  color: #000;
+}
+
+/* Доступность */
+.stock {
+  color: #6a5acd;
+  font-weight: bold;
+  margin-top: 15px;
+}
