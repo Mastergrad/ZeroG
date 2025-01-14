@@ -1,144 +1,70 @@
 
+/* Общие стили */
 body {
-    font-family: 'Trebuchet MS', sans-serif;
-    background: linear-gradient(135deg, #1a1a1a, #333333); /* Градиентный фон */
-    color: #f9f9f9;
-    margin: 0;
-    padding: 0;
-    animation: fadeIn 2s ease-in-out; /* Анимация плавного появления */
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+  line-height: 1.6;
 }
 
-header, footer {
-    background: linear-gradient(90deg, #ffcc00, #ff9900); /* Градиент для заголовков и подвала */
-    color: #1a1a1a;
-    text-align: center;
-    padding: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    animation: slideInDown 1s ease-in-out; /* Анимация появления сверху */
+/* Заголовки */
+h1 {
+  color: #343a40;
+  font-size: 2.5em;
+  font-weight: bold;
 }
 
-nav {
-    background: linear-gradient(180deg, #333333, #1a1a1a); /* Градиент для навигации */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+h2 {
+  color: #495057;
+  font-size: 2em;
 }
 
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+h3 {
+  color: #007bff;
+  font-size: 1.75em;
 }
 
-nav a:hover {
-    background-color: #ffcc00;
-    color: #1a1a1a;
-    transform: scale(1.1); /* Увеличение при наведении */
+/* Текст */
+p {
+  color: #212529;
+  font-size: 1em;
+  margin-bottom: 1.2em;
 }
 
-main {
-    padding: 40px;
-    text-align: left;
-    max-width: 900px;
-    margin: 20px auto;
-    background-color: #2b2b2b;
-    border-radius: 15px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
-    animation: fadeInUp 1.5s ease-in-out; /* Анимация появления снизу */
+/* Ссылки */
+a {
+  color: #007bff;
+  text-decoration: none;
 }
 
-h1, h2, h3 {
-    color: #ffcc00;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тень для текста */
+a:hover {
+  color: #0056b3;
+  text-decoration: underline;
 }
 
+/* Кнопки */
 button {
-    background: linear-gradient(90deg, #ffcc00, #ff9900);
-    color: #1a1a1a;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-    transition: background-color 0.3s ease, transform 0.3s ease;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1em;
 }
 
 button:hover {
-    background-color: #ffd633;
-    transform: translateY(-3px); /* Подъём при наведении */
+  background-color: #218838;
 }
 
-ul {
-    list-style-type: square;
-    padding-left: 30px;
+/* Выделенные элементы */
+.highlight {
+  color: #ff6f61;
+  font-weight: bold;
 }
 
-li {
-    margin: 15px 0;
-    transition: transform 0.3s ease;
-}
-
-li:hover {
-    transform: translateX(10px); /* Смещение при наведении */
-}
-
-footer {
-    font-size: 14px;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3);
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes slideInDown {
-    from {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        transform: translateY(50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@media (max-width: 768px) {
-    nav {
-        flex-wrap: wrap;
-        padding: 10px;
-    }
-
-    nav a {
-        margin: 5px;
-        padding: 10px;
-    }
+/* Подзаголовки или мелкий текст */
+.small-text {
+  color: #868e96;
+  font-size: 0.875em;
 }
