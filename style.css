@@ -1,70 +1,99 @@
 
 /* Общие стили */
 body {
-  font-family: 'Arial', sans-serif;
-  background: linear-gradient(135deg, #f9f9f9, #e3e3e3);
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #f3f4f6, #d9e8fc);
   color: #333;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
 }
 
-/* Главный контейнер */
-.container {
-  max-width: 800px;
-  margin: 20px auto;
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+/* Хедер */
+header {
+  background: linear-gradient(to right, #ff4d4d, #ff9900);
+  color: white;
   text-align: center;
-  animation: fadeIn 1.2s ease-in-out;
+  padding: 20px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin: 0;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Навигация */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  background: #fff;
+  padding: 10px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+  text-decoration: none;
+  color: #555;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background: #ff4d4d;
+  color: white;
+}
+
+/* Основное содержимое */
+main {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1.5s ease-in-out;
 }
 
 /* Заголовки */
-h1 {
-  font-size: 2.5em;
+h2, h3 {
+  color: #ff6f61;
   font-weight: bold;
-  background: linear-gradient(to right, #ff4747, #ff9e0f);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 10px;
-  animation: popIn 0.8s ease-in-out;
 }
 
 h2 {
-  font-size: 1.5em;
-  color: #555;
+  font-size: 2em;
   margin-bottom: 20px;
 }
 
-/* Цена */
-.price {
-  font-size: 2.8em;
-  font-weight: bold;
-  color: #ff5722;
-  margin: 20px 0;
-  animation: pulse 1.5s infinite;
+h3 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
 }
 
-/* Кнопка */
+/* Кнопки */
 button {
-  background: linear-gradient(to right, #4caf50, #8bc34a);
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
   color: white;
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: bold;
-  padding: 15px 30px;
+  padding: 10px 20px;
   border: none;
-  border-radius: 12px;
+  border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 button:hover {
-  background: linear-gradient(to right, #388e3c, #689f38);
+  background: linear-gradient(to right, #feb47b, #ff7e5f);
   transform: scale(1.1);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Ссылки */
@@ -80,21 +109,6 @@ a:hover {
   color: #ff3d3d;
 }
 
-/* Маленький текст */
-.small-text {
-  font-size: 0.9em;
-  color: #999;
-  margin-top: 15px;
-}
-
-/* Интерактивные элементы */
-.stock {
-  font-size: 1.2em;
-  color: #2196f3;
-  margin-top: 15px;
-  animation: fadeIn 1.5s ease-in-out;
-}
-
 /* Анимации */
 @keyframes fadeIn {
   from {
@@ -107,57 +121,29 @@ a:hover {
   }
 }
 
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-}
-
-@keyframes popIn {
-  0% {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
 /* Адаптивный дизайн */
 @media (max-width: 768px) {
-  .container {
-    padding: 20px;
+  main {
+    padding: 15px;
   }
 
-  h1 {
-    font-size: 2em;
-  }
-
-  .price {
-    font-size: 2em;
-  }
-
-  button {
-    padding: 10px 20px;
+  nav a {
     font-size: 1em;
+    padding: 5px 10px;
   }
 }
 
 @media (max-width: 480px) {
-  h1 {
-    font-size: 1.8em;
+  header h1 {
+    font-size: 2em;
   }
 
-  .price {
+  h2 {
     font-size: 1.5em;
   }
 
-  button {
-    padding: 8px 16px;
-    font-size: 0.9em;
+  nav {
+    flex-direction: column;
+    gap: 10px;
   }
 }
