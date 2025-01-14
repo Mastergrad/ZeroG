@@ -1,23 +1,26 @@
 
 body {
     font-family: 'Trebuchet MS', sans-serif;
-    background-color: #1a1a1a; /* Темный фон в стиле Roblox */
-    color: #f9f9f9; /* Светлый текст для контраста */
+    background: linear-gradient(135deg, #1a1a1a, #333333); /* Градиентный фон */
+    color: #f9f9f9;
     margin: 0;
     padding: 0;
+    animation: fadeIn 2s ease-in-out; /* Анимация плавного появления */
 }
 
 header, footer {
-    background-color: #242424; /* Темный заголовок и подвал */
-    color: #ffcc00; /* Желтый текст, напоминающий акценты Roblox */
+    background: linear-gradient(90deg, #ffcc00, #ff9900); /* Градиент для заголовков и подвала */
+    color: #1a1a1a;
     text-align: center;
     padding: 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    animation: slideInDown 1s ease-in-out; /* Анимация появления сверху */
 }
 
 nav {
-    background-color: #333333; /* Темно-серый фон навигации */
+    background: linear-gradient(180deg, #333333, #1a1a1a); /* Градиент для навигации */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,68 +28,109 @@ nav {
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
 }
 
 nav a {
-    color: #ffffff; /* Белый текст навигации */
+    color: #ffffff;
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
-    padding: 8px 12px;
+    padding: 10px 15px;
     border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
 nav a:hover {
-    background-color: #ffcc00; /* Желтый фон при наведении */
-    color: #1a1a1a; /* Темный текст */
+    background-color: #ffcc00;
+    color: #1a1a1a;
+    transform: scale(1.1); /* Увеличение при наведении */
 }
 
 main {
-    padding: 30px;
+    padding: 40px;
     text-align: left;
     max-width: 900px;
-    margin: auto;
-    background-color: #2b2b2b; /* Темный блок контента */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    margin: 20px auto;
+    background-color: #2b2b2b;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+    animation: fadeInUp 1.5s ease-in-out; /* Анимация появления снизу */
 }
 
 h1, h2, h3 {
-    color: #ffcc00; /* Заголовки выделены желтым */
+    color: #ffcc00;
     text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тень для текста */
+}
+
+button {
+    background: linear-gradient(90deg, #ffcc00, #ff9900);
+    color: #1a1a1a;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #ffd633;
+    transform: translateY(-3px); /* Подъём при наведении */
 }
 
 ul {
     list-style-type: square;
-    padding-left: 20px;
+    padding-left: 30px;
 }
 
 li {
-    margin: 10px 0;
+    margin: 15px 0;
+    transition: transform 0.3s ease;
+}
+
+li:hover {
+    transform: translateX(10px); /* Смещение при наведении */
 }
 
 footer {
     font-size: 14px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3);
 }
 
-button {
-    background-color: #ffcc00;
-    color: #1a1a1a;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-button:hover {
-    background-color: #ffd633; /* Более яркий желтый при наведении */
+@keyframes slideInDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
-/* Адаптивность для мобильных устройств */
+@keyframes fadeInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 @media (max-width: 768px) {
     nav {
         flex-wrap: wrap;
